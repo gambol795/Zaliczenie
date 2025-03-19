@@ -29,11 +29,6 @@ header {
  margin-bottom: 30px;
 }
 
-h1 {
-    font-size: 3vw;
-    color: var(--text-color)
-}
-
 nav {
     position: fixed;
     top: 1vh
@@ -73,3 +68,27 @@ a:hover {
     color: var(--text-color);
     background-color: var(--spare3-color);
 }
+
+.hellopage {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.helloheader {
+    font-size: 1vw;
+    color: var(--text-color);
+    margin-right: 4vw;
+    align-items: center;
+}
+
+.hello {
+    display: block;
+    background-color: #606b72ad;
+    color: var(--text-color);
+    padding: 1vh;
+    width: 25vh;
+    border-radius: 0.25rem;
+    height: 30vh;
+}
+
