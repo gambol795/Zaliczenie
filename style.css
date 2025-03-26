@@ -24,7 +24,7 @@ body {
 
 header {
  height: 100vh;
- background-image: url(img/frozen-8496388.jpg);
+ /* background-image: url(img/frozen-8496388.jpg); */
  display: flex;
  flex-direction: column;
  align-items: center;
