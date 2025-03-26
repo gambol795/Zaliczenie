@@ -19,7 +19,7 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
-    background-color: rgb(21,21,21);
+    background-color: #87a9a8;
 }
 
 header {
@@ -33,7 +33,7 @@ header {
  margin-bottom: 30px;
 }
 
-nav {
+/* nav {
     position: fixed;
     top: 1vh
 }
@@ -71,7 +71,94 @@ a {
 a:hover {
     color: var(--text-color);
     background-color: var(--spare3-color);
+} */
+
+/* Existing nav styles */
+nav {
+    position: fixed;
+    top: 1vh;
+    width: 100%;
+    z-index: 1000;
 }
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    background-color: var(--main-color);
+    max-width: fit-content;
+    border-radius: 0.25rem;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-evenly;
+}
+
+li {
+    margin: 0.2rem;
+}
+
+a {
+    display: block;
+    font-size: 1.6vh;
+    text-decoration: none;
+    text-wrap: nowrap;
+    padding: 1vh;
+    border-radius: 0.25rem;
+    color: var(--text-color);
+    text-align: center;
+    transition-duration: 0.5s;
+}
+
+a:hover {
+    color: var(--text-color);
+    background-color: var(--spare3-color);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    position: relative; /* To ensure it stays within the navbar */
+}
+.bar {
+    height: 5px;
+    width: 100%;
+    background-color: var(--text-color);
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        right: 1vw;
+    }
+
+    ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--main-color);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        margin: 0;
+    }
+
+    ul.active {
+        display: flex; /* Show the menu when active */
+    }
+
+    li {
+        margin: 1rem 0;
+        text-align: center;
+    }
+}
+
 
 .hellopage {
     display: flex;
@@ -95,4 +182,3 @@ a:hover {
     border-radius: 0.25rem;
     height: 30vh;
 }
-
