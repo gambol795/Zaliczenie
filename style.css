@@ -20,11 +20,12 @@ body {
     font-weight: 400;
     font-style: normal;
     background-color: #87a9a8;
+    margin: 0;
+    padding: 0;
 }
 
 header {
  height: 100vh;
- /* background-image: url(img/frozen-8496388.jpg); */
  display: flex;
  flex-direction: column;
  align-items: center;
@@ -33,51 +34,11 @@ header {
  margin-bottom: 30px;
 }
 
-/* nav {
-    position: fixed;
-    top: 1vh
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    background-color: var(--main-color);
-    max-width: fit-content;
-    border-radius: 0.25rem;
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: space-evenly;
-}
-
-li {
-    flex-basis: 1rem;
-    margin: 0.2rem;
-}
-
-a {
-    display: block;
-    font-size: 1.6vh;
-    text-decoration: none;
-    text-wrap: nowrap;
-    padding: 1vh;
-    border-radius: 0.25rem;
-    color: var(--text-color);
-    text-align: center;
-    transition-duration: 0.5s;
-}
-
-a:hover {
-    color: var(--text-color);
-    background-color: var(--spare3-color);
-} */
-
-/* Existing nav styles */
 nav {
     position: fixed;
     top: 1vh;
     width: 100%;
+    height: 50px;
     z-index: 1000;
 }
 
@@ -92,6 +53,7 @@ ul {
     margin-left: auto;
     margin-right: auto;
     justify-content: space-evenly;
+    transition: all 0.3s ease-in-out;
 }
 
 li {
@@ -122,43 +84,20 @@ a:hover {
     width: 30px;
     height: 25px;
     cursor: pointer;
-    position: relative; /* To ensure it stays within the navbar */
+    background-color: var(--main-color);
+    padding: 1vh;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 1vh;
+    right: 2vw;
 }
+
 .bar {
     height: 5px;
     width: 100%;
     background-color: var(--text-color);
     border-radius: 5px;
 }
-
-@media screen and (max-width: 768px) {
-    .hamburger {
-        display: flex;
-        right: 1vw;
-    }
-
-    ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: var(--main-color);
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 999;
-        margin: 0;
-    }
-
-    ul.active {
-        display: flex; /* Show the menu when active */
-    }
-
-    li {
-        margin: 1rem 0;
-        text-align: center;
-    }
-}
-
 
 .hellopage {
     display: flex;
@@ -179,6 +118,192 @@ a:hover {
     color: var(--text-color);
     padding: 1vh;
     width: 25vh;
+    font-size: 0.8vw;
     border-radius: 0.25rem;
-    height: 30vh;
+    height: auto;
+}
+
+.about-header {
+    height: 25vh;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 150px); /* You can adjust height here */
+    grid-template-areas: 
+        "item1 item2 item3"
+        "item1 item2 item4";
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 180vh;
+    margin: 0 auto;
+}
+
+.about-item:nth-child(1) { grid-area: item1; }
+.about-item:nth-child(2) { grid-area: item2; }
+.about-item:nth-child(3) { grid-area: item3; }
+.about-item:nth-child(4) { grid-area: item4; }
+
+.about-item {
+    background-color: var(--spare2-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 2.5vh;
+    font-weight: bold;
+    padding: 3vh;
+}
+
+.aboutopage {
+    margin-top: 6vh;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.aboutheader {
+    font-size: 1vw;
+    color: var(--text-color);
+    align-items: center;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 29vh); /* You can adjust height here */
+    grid-template-areas: 
+        "item1 item2"
+        "item1 item2";
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 120vh;
+    margin: 0 auto;
+}
+
+.contact-item:nth-child(1) { grid-area: item1; }
+.contact-item:nth-child(2) { grid-area: item2; }
+
+/* .contact-item {
+    background-color: var(--spare2-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 2.5vh;
+    font-weight: bold;
+    padding: 3vh;
+} */
+
+.contact-item {
+    padding: 2rem;
+    background-color: var(--spare2-color);
+    color: white;
+}
+
+.contact-item h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+input, textarea {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 0.5rem;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #357abd;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        right: 2vw;
+        top: 1.5vh;
+    }
+
+    ul {
+        display: none;
+        flex-direction: column;
+        background-color: var(--main-color);
+        position: absolute;
+        top: 1.5vh; 
+        right: 11vw;
+        width: 180px;
+        z-index: 999;
+        border-radius: 0.25rem;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    ul.active {
+        display: flex;
+    }
+
+    li {
+        margin: 0.5rem 0;
+        text-align: left;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .helloheader {
+        font-size: 4vw;
+        text-align: center;
+        margin: 1rem auto;
+    }
+
+    .aboutheader {
+        font-size: 4vw;
+        text-align: center;
+        margin: 1rem auto;
+    }
+
+    .about-container {
+        grid-template-columns: 2fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "item1"
+            "item2"
+            "item3"
+            "item4";
+    }
+
+    .hello {
+        font-size: 3.5vw;
+        width: 80vw;
+        height: auto;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .hellopage {
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+    }
 }

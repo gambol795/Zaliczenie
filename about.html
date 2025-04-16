@@ -6,14 +6,12 @@
     <title>Zaliczene Karol Kubicki</title>
     <meta name="author" content="Karol Kubicki">
     <link rel="stylesheet" href="style.css" class="css">
-    <meta name=description content="Zaliczenie">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-    <header>
-        <div class="hellopage">
-            <div class="helloheader"><h1>Witaj</h1></div>
-            <div class="hello"><p>Witaj <br>Cześć nazywam sie Karol jestem uczniem 3 klasy technikum informatycznego..</p></div>
+    <header class="about-header">
+        <div class="aboutopage">
+            <div class="aboutheader"><h1>O sobie</h1></div>
         </div>
         <nav>
             <div class="hamburger" onclick="toggleMenu()">
@@ -24,7 +22,7 @@
             <ul class="nav-menu">
                 <li><a class="nav-link" href="index.html">Strona główna</a></li>
                 <li><a class="nav-link" href="about.html">O sobie</a></li>
-                <li><a class="nav-link" target="_blank" href="https://paderek-knurow.pl/">Strona szkoły</a></li>
+                <li><a class="nav-link" href="https://paderek-knurow.pl/" target="_blank">Strona szkoły</a></li>
                 <li><a class="nav-link" href="contact.html">Kontakt</a></li>
                 <li><a class="nav-link" href="strona3.html">Galeria</a></li>
             </ul>
@@ -32,9 +30,12 @@
     </header>
     <div class="container">
         <main>
-           <article>
-                
-           </article>
+            <article class="about-container">
+                <div class="about-item">Cześć! Nazywam się Karol, mam 17 lat i jestem uczniem trzeciej klasy o profilu technik informatyk. Uczęszczam do Zespołu Szkół im. Jana Paderewskiego w Knurowie.</div>
+                <div class="about-item">Moje hobby to między innymi jazda na rowerze, programowanie w różnych językach oraz gra w piłkę nożną w weekendy.</div>
+                <div class="about-item">3</div>
+                <div class="about-item">4</div>
+            </article>
         </main>
     </div>
     <script src="app.js"></script>
