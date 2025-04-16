@@ -145,7 +145,7 @@ a:hover {
 
 .about-item:nth-child(1) { grid-area: item1; }
 .about-item:nth-child(2) { grid-area: item2; }
-.about-item:nth-child(3) { grid-area: item3; height: 55vh; }
+.about-item:nth-child(3) { grid-area: item3; height: 45vh; }
 
 .about-item {
     background-color: var(--spare2-color);
@@ -199,7 +199,7 @@ input, textarea {
 
 button {
     padding: 0.5rem;
-    background-color: #4a90e2;
+    background-color: #353535;
     color: white;
     border: none;
     border-radius: 5px;
