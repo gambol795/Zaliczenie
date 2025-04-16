@@ -3,7 +3,6 @@ function toggleMenu() {
     menu.classList.toggle('active');
 }
 
-// Close menu when a nav link is clicked (for mobile)
 document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
     const menu = document.querySelector('ul');
@@ -16,4 +15,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
