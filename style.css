@@ -231,6 +231,13 @@ button:hover {
     transform: scale(1.05);
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
 .tablesite {
     display: flex;
     justify-content: center;
@@ -264,6 +271,31 @@ table, th, td {
     border: 1px solid #ddd;
 }
 
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+footer a {
+    color: #ddd;
+    text-decoration: none;
+    font-weight: 500;
+}
+footer a:hover {
+    color: #fff;
+}
+footer small {
+    font-size: 0.9em;
+    color: #aaa;
+}
 
 @media screen and (max-width: 768px) {
     .hamburger {
